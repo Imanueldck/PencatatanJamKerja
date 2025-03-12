@@ -56,18 +56,32 @@ if (isset($_GET['edit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pencatat Jam Kerja</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
-        .container { max-width: 800px; margin: 40px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        .btn-custom { background-color: #007bff; color: white; border-radius: 5px; padding: 5px 10px; }
-        .btn-custom:hover { background-color: #0056b3; }
-        table { margin-top: 20px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- ✅ Navbar yang lebih baik -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Catatan Kerja</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.php">Jam Kerja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pengeluaran.php">Pengeluaran</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container custom-container">
         <h2 class="text-center">Pencatat Jam Kerja</h2>
-        <form method="post" class="mb-3">
+        <form method="post" class="work-form">
             <input type="hidden" name="edit_id" value="<?php echo $editData['id']; ?>">
             <div class="mb-2">
                 <label for="date" class="form-label">Tanggal:</label>
@@ -85,7 +99,7 @@ if (isset($_GET['edit'])) {
         </form>
         
         <h3 class="text-center">Riwayat Jam Kerja</h3>
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered work-table">
             <thead class="table-dark">
                 <tr>
                     <th>No</th>
@@ -110,7 +124,7 @@ if (isset($_GET['edit'])) {
                         <td>{$entry['hours']}</td>
                         <td>
                             <a class='btn btn-warning btn-sm' href='?edit={$entry['id']}'>Edit</a>
-                            <a class='btn btn-danger btn-sm' href='?delete={$entry['id']}' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>
+                           <a class='btn btn-danger btn-sm' href='?delete={$entry['id']}' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>
                         </td>
                     </tr>";
                     $totalHours += $entry['hours'];

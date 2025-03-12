@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+/* Heading Styles */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0d3056;
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #343a40;
+}
+/* Container Styling */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Custom Styles */
+.navbar-custom {
+  background-color: #343a40;
+  padding: 15px;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-custom .nav-link {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #17a2b8;
+}
+
+/* Form Styling */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section .form-label {
+  font-weight: bold;
+}
+
+.form-section .form-control {
+  border-radius: 5px;
+}
+
+/* Button Custom */
+.btn-custom {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styling */
+.table-section {
+  margin-top: 20px;
+}
+
+.table-section .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-section .table th {
+  background-color: #343a40;
+  color: white;
+}
+
+.table-section .table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Total Hours Section */
+.total-hours {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}

@@ -1,0 +1,79 @@
+/* Gaya Umum */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+/* Navbar Custom Styles */
+.navbar-custom {
+  background-color: #343a40;
+  padding: 15px;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-custom .nav-link {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #17a2b8;
+}
+/* Container Styling */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Container untuk halaman pengeluaran */
+.pengeluaran .container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya tombol */
+.pengeluaran .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.pengeluaran .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Gaya tabel */
+.pengeluaran table {
+  margin-top: 20px;
+}
+
+.pengeluaran table th {
+  text-align: center;
+}
+
+/* Heading Styles */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0d3056;
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #343a40;
+}
