@@ -114,6 +114,7 @@ if (isset($_GET['edit'])) {
                 <?php
                 $result = $conn->query("SELECT * FROM work_log ORDER BY date ASC");
                 $totalHours = 0;
+                $totalIncome = 0;
                 $no = 1;
                 while ($entry = $result->fetch_assoc()) {
                     echo "<tr>
@@ -128,12 +129,14 @@ if (isset($_GET['edit'])) {
                         </td>
                     </tr>";
                     $totalHours += $entry['hours'];
+                    $totalIncome = $totalHours * 12500;
                     $no++;
                 }
                 ?>
             </tbody>
         </table>
-        <h3 class="text-center">Total Jam: <?php echo number_format($totalHours, 2); ?></h3>
+        <h3 class="text-center">Total Jam : <?php echo number_format($totalHours, 2); ?></h3>
+        <h3 class="text-center">Total Pendapatan: Rp <?php echo number_format($totalIncome, 0, ',', '.'); ?></h3>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
